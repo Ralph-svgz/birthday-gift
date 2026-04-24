@@ -88,7 +88,9 @@ canvas {
     margin-bottom: 1rem;
     animation: bounce 4s infinite;
     font-size: 6rem;
-    line-height: 1;
+    line-height: 1.2;
+    text-align: center;
+    display: inline-block;
 }
 
 .cat-image img {
