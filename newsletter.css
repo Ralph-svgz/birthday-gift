@@ -1,0 +1,211 @@
+/* Newspaper Core Styles */
+:root {
+    --paper-bg: #FDFBF7; /* Off-white / cream paper color */
+    --text-color: #111111;
+    --border-color: #222222;
+}
+
+body {
+    background-color: #E6F0F9;
+    color: var(--text-color);
+    font-family: 'Lora', serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.newspaper-container {
+    width: 100%;
+    max-width: 900px;
+    background-color: #FFFFFF;
+    padding: 2rem 3rem;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    margin: 2rem 0;
+}
+
+/* Header Styles */
+.newspaper-header {
+    text-align: center;
+    border-bottom: 2px solid var(--border-color);
+    padding-bottom: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.title {
+    font-family: 'UnifrakturMaguntia', cursive;
+    font-size: 5rem;
+    margin: 0;
+    line-height: 1.1;
+    letter-spacing: 2px;
+}
+
+.sub-header {
+    display: flex;
+    justify-content: space-between;
+    border-top: 2px solid var(--border-color);
+    border-bottom: 4px solid var(--border-color);
+    padding: 0.5rem 0;
+    margin-top: 0.5rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-family: Arial, sans-serif;
+    letter-spacing: 1px;
+}
+
+/* Main Headline */
+.main-headline-container {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.main-headline {
+    font-size: 4rem;
+    margin: 0;
+    font-family: 'Lora', serif;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.cursive-name {
+    font-family: 'Great Vibes', cursive;
+    font-size: 5.5rem;
+    font-weight: 400;
+    color: #333;
+    padding: 0 0.5rem;
+}
+
+/* Layout */
+.newspaper-content {
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start;
+}
+
+.left-column {
+    flex: 1.2;
+    display: flex;
+    flex-direction: column;
+}
+
+.right-column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Typography and Elements */
+.news-text {
+    font-size: 1.15rem;
+    line-height: 1.6;
+    text-align: justify;
+    margin-bottom: 1.5rem;
+}
+
+.image-wrapper {
+    width: 100%;
+    margin-bottom: 0.5rem;
+}
+
+.news-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border: 1px solid #ccc;
+}
+
+.large-image .news-img {
+    aspect-ratio: 4/5;
+    object-fit: cover;
+}
+
+.small-image {
+    margin-top: 1rem;
+}
+
+.small-image .news-img {
+    aspect-ratio: 4/3;
+    object-fit: cover;
+}
+
+.image-caption {
+    font-size: 0.9rem;
+    text-align: center;
+    font-style: italic;
+    color: #555;
+    margin-top: 0.5rem;
+    margin-bottom: 2rem;
+}
+
+.right-intro {
+    font-size: 1.15rem;
+    margin-bottom: 2rem;
+}
+
+.wishing-text {
+    font-family: 'Great Vibes', cursive;
+    font-size: 2.8rem;
+    line-height: 1.4;
+    text-align: center;
+    margin: 1.5rem 0;
+    color: #111;
+}
+
+/* Dropcap for the right intro */
+.right-intro::first-letter {
+    float: left;
+    font-size: 3.5rem;
+    line-height: 0.8;
+    padding-right: 0.5rem;
+    padding-top: 0.2rem;
+    font-family: 'UnifrakturMaguntia', cursive;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .title {
+        font-size: 3.5rem;
+    }
+    .main-headline {
+        font-size: 2.5rem;
+    }
+    .cursive-name {
+        font-size: 3.5rem;
+    }
+    .newspaper-content {
+        flex-direction: column;
+    }
+    .newspaper-container {
+        padding: 1.5rem;
+        margin: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .title {
+        font-size: 2.8rem;
+    }
+    .main-headline {
+        font-size: 2.2rem;
+    }
+    .cursive-name {
+        font-size: 3rem;
+    }
+    .sub-header {
+        font-size: 0.85rem;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+    }
+    .wishing-text {
+        font-size: 2.2rem;
+    }
+    .right-intro::first-letter {
+        font-size: 3rem;
+    }
+    .newspaper-container {
+        padding: 1rem;
+        margin: 0;
+    }
+}
